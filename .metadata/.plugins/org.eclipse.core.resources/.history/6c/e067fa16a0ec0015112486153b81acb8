@@ -1,0 +1,41 @@
+public class JadenCase {
+
+	public String toJadenCase(String phrase) {
+		
+    //phrase.charAt(0).toString.toUpperCase();
+    
+    String newPhrase[] = phrase.split("");
+    String lastPhrase = "";
+    
+    for (int i = 0; i < newPhrase.length; i++)
+    {
+      newPhrase[i].substring(0,1).toUpperCase();
+    }
+    
+    if (newPhrase.length > 0)
+    {
+      //phrase = Arrays.toString(newPhrase);
+      for (int x=0; x < newPhrase.length; x++)
+      {
+        lastPhrase += newPhrase[x] + " ";
+        
+      }
+      
+      return lastPhrase;
+      
+     }
+		
+		return null;
+	}
+
+	public static void main(String[] args){
+		
+		JadenCase test = new JadenCase();
+		
+		String testString = "most trees are blue";
+		String output = toJadenCase(testString);
+		System.out.println(output);
+		
+	}
+	
+}

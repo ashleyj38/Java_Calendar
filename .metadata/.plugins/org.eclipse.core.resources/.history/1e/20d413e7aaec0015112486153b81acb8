@@ -1,0 +1,40 @@
+import java.text.DecimalFormat;
+public class NthSeries {
+	
+	public static String seriesSum(int n) {
+		// Happy Coding ^_^	
+    double sum = 0.0;
+    int increase = 1;
+    
+    DecimalFormat df = new DecimalFormat("#.##");
+    
+    if (n == 0)
+    {
+      return "0.00";
+    }
+    else
+    {
+      for(int counter = 1; counter <= n; counter++)
+      {
+        sum += (double)1/increase;
+        increase += 3;
+      }
+      String returnValue = Double.toString(sum);
+      //String returnValue = df.format(Double.toString(sum));
+      
+      System.out.println(returnValue);
+      returnValue = df.format(returnValue);
+      //return returnValue; 
+      return "0.00";
+    }
+    
+	}
+	
+	public static void main(String[] args) {
+		String test = seriesSum(5);
+		
+		DecimalFormat decimalformat = new DecimalFormat("#.#");
+		String format = decimalformat.format(12.354);
+		System.out.println(format);
+	}
+}

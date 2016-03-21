@@ -1,0 +1,65 @@
+
+import java.util.*;
+
+public class UniqueArray {
+  public static int[] unique(int[] integers) {
+    //int newArray[];
+    int finalArray[]={};
+    
+    ArrayList<Integer> newArray = new ArrayList<Integer>();
+    
+    if (integers.length == 0)
+    {
+    	return;
+    }
+    else
+    {
+      
+      for (int i = 0; i < integers.length; i++)
+      {
+        //boolean exists = false;
+        /*for(int x = 0; x < newArray.size; x++)
+        {
+          if (newArray[x] == integers[i])
+          {
+            exists = true;
+          }
+        }*/
+    	  
+    	  System.out.println("You are here");
+        
+        if(!newArray.contains(integers[i]))
+        {
+          newArray.add(integers[i]);
+        }
+      }
+      
+    System.out.println("Now you are here");
+      
+      for (int y = 0; y < newArray.size();y++)
+      {
+    	  System.out.println("Do I make it here?");
+        //finalArray[y] = (int)newArray.get(y);
+        System.out.println("Value added was" + finalArray[y]);
+      }
+      
+      
+    }
+    return finalArray;
+  }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int testArray[] = {10,5,14,10,62,12,14,4,14};
+		
+		int returnedArray[] = unique(testArray);
+		
+		for(int x=0;x<returnedArray.length;x++)
+		{
+			System.out.print(returnedArray[x] + " ");
+		}
+
+	}
+
+}

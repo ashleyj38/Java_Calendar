@@ -1,0 +1,14 @@
+
+class Day {
+	int date;
+	char weekday;
+}
+
+class Week {
+	int weekNum;
+	Day week[];
+}
+
+public class Month {
+	Week month[];
+}

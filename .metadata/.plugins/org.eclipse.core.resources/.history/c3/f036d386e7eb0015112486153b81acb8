@@ -1,0 +1,12 @@
+import javax.swing.JPanel;
+
+public class Display extends JPanel {
+	
+	public Display() {
+		
+	}
+
+	public static void main(String[] args) {
+		
+	}
+}

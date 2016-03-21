@@ -1,0 +1,5 @@
+
+class Day {
+	int date;
+	char weekday;
+}

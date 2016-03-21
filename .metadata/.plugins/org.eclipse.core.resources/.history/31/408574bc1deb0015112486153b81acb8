@@ -1,0 +1,16 @@
+
+public class Day {
+	int date;
+	char weekday;
+}
+
+public class Week {
+	int weekNum;
+	Day week[7];
+}
+
+public class Month {
+	Week month[5];
+}
+
+

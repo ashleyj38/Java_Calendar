@@ -1,0 +1,17 @@
+import javax.swing.JPanel;
+import javax.swing.*;
+
+public class Display extends JPanel {
+	
+	public Display() {
+		JPanel newPanel = new JPanel(new GridBagLayout());
+		//newPanel.setLayout(new GridBagLayout());
+		JLabel label = new JLabel("Enter username: ");
+		
+		newPanel.add(label, GridBagLayout.NORTH);
+	}
+
+	public static void main(String[] args) {
+		Display calendar = new Display();
+	}
+}
