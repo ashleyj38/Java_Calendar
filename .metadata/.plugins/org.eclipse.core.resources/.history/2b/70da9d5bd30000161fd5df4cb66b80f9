@@ -6,38 +6,19 @@ import java.util.*;
 class Day {
 	int date;
 	char weekday;
-	
-	Day(String day) {
-		date = Integer.parseInt(day);
-		System.out.println("The date is : " + date);
-	}
 }
 
 class Week {
 	int weekNum;
 	Day week[];
-	
-	Week(){
-		
-	}
 }
 
 class Month {
-	int monthNum;
 	Week month[];
-	
-	Month(String currMo){
-		monthNum = Integer.parseInt(currMo);
-		System.out.println("The month is: " + monthNum);
-	}
 }
 
 class Year {
 	Month year[];
-	
-	Year() {
-		
-	}
 }
 
 public class Calendar extends JFrame {
@@ -52,15 +33,7 @@ public class Calendar extends JFrame {
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 		Date date = new Date();
 		String currentDate = dateFormat.format(date);
-		System.out.println(currentDate);
-		
-		String dateComponents[] = currentDate.split("/");
-		
-		for (int x = 0; x < dateComponents.length; x++)
-			System.out.println(dateComponents[x]);
-		
-		new Month(dateComponents[1]);
-		new Day(dateComponents[2]);
+		System.out.println(dateFormat.format(date));
 		
 	}
 	

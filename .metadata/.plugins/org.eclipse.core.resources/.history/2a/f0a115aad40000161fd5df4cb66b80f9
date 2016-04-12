@@ -23,12 +23,10 @@ class Week {
 }
 
 class Month {
-	int monthNum;
 	Week month[];
 	
-	Month(String currMo){
-		monthNum = Integer.parseInt(currMo);
-		System.out.println("The month is: " + monthNum);
+	Month(String monthNum){
+		
 	}
 }
 

@@ -28,7 +28,6 @@ class Month {
 	
 	Month(String currMo){
 		monthNum = Integer.parseInt(currMo);
-		System.out.println("The month is: " + monthNum);
 	}
 }
 
