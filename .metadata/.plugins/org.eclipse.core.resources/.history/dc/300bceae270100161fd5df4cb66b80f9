@@ -75,14 +75,14 @@ class Day {
 		}
 		else {
 			
-			//System.out.println("We make it here!");
+			System.out.println("We make it here!");
 			weekday = step6 - 3;
 			
 			if (weekday < 0)
 				weekday += 7;
 		}
 		
-		//System.out.println("The month starts on weekday " + weekday);
+		System.out.println("The month starts on weekday " + weekday);
 		
 		return weekday;
 	}

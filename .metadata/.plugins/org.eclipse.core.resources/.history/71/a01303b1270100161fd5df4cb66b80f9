@@ -82,7 +82,7 @@ class Day {
 				weekday += 7;
 		}
 		
-		//System.out.println("The month starts on weekday " + weekday);
+		System.out.println("The month starts on weekday " + weekday);
 		
 		return weekday;
 	}

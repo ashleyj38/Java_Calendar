@@ -14,30 +14,24 @@ class Day {
 		int step1, step2, step3, step4, step5, step6;
 		
 		//Step 1: How many times does 12 fit into the last two year digits
-		double roundedYr = 100 * Math.floor((year+50)/100);
-		int diff = year - (int)roundedYr;
+		int diff = year - (((year + 99)/100)*100);
 		step1 = diff/12;
-		//System.out.println("step 1: " + step1);
 		
 		//Step2: Difference btn last two 
 		step2 = diff%12;
-		System.out.println("step 2: " + step2);
 		
 		//Step3: 4 in results of 2
 		step3 = step2/4;
-		//System.out.println("step 3: " + step3);
 		
 		step4 = anchor;
-		//System.out.println("step 4: " + step4);
 		
 		//Step5: Sum 1 through 4
 		step5 = step1 + step2 + step3 + step4;
-		//System.out.println("step 5: " + step5);
 		
 		//Step6: Remainder of 7
 		step6 = Math.abs(step5%7);
 		
-		//System.out.println("The final result of calculation is : " + step6);
+		System.out.println("The final result of calculation is : " + step6);
 		
 		//Calculate weekday based off of doomsday/step 6
 		
@@ -75,14 +69,14 @@ class Day {
 		}
 		else {
 			
-			//System.out.println("We make it here!");
+			System.out.println("We make it here!");
 			weekday = step6 - 3;
 			
 			if (weekday < 0)
 				weekday += 7;
 		}
 		
-		//System.out.println("The month starts on weekday " + weekday);
+		System.out.println("The month starts on weekday " + weekday);
 		
 		return weekday;
 	}
