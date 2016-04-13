@@ -123,14 +123,12 @@ public class Calendar extends JFrame {
 		//Set number of days to display based on currentMo 
 		days = currentYear.getDate(currentMo-1);
 		
-		//Days of the month
 		for (int count = 0; count < days; count++)
 		{
 			components.add(new JButton(Integer.toString(count+1)));
 		
 		}
 		
-		//Day of the Week labels
 		headings.add(new Label(""));
 		headings.add(new Label("Sunday"));
 		headings.add(new Label("Monday"));
@@ -141,18 +139,15 @@ public class Calendar extends JFrame {
 		headings.add(new Label("Saturday"));
 		headings.add(new Label(""));
 		
-		//Navigation buttons
 		leftNavigation.add(new JButton("Previous"));
 		rightNavigation.add(new JButton("Next"));
 		
 		title.add(new Label("Month: " + Integer.toString(currentMo)));
 		
-		//Set gaps and size
 		experiment.setHgap(0);
 		experiment.setVgap(0);
 		experiment.layoutContainer(components);
 		
-		//Add components to panel
 		p.add(title, BorderLayout.NORTH);
 		p.add(headings, BorderLayout.NORTH);
 		p.add(components, BorderLayout.CENTER);

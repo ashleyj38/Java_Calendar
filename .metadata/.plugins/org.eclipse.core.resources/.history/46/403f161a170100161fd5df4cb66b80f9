@@ -67,16 +67,12 @@ class Year {
 		}
 		
 	}
-	
-	int getDate(int monthNum) {
-		return year[monthNum].totalDays[monthNum];
-	}
 }
 
 public class Calendar extends JFrame {
 	
 	private JPanel p;
-	private int days;
+	private int days = 30;
 	GridLayout experiment = new GridLayout(0,7);
 	
 	Year currentYear;
@@ -100,7 +96,6 @@ public class Calendar extends JFrame {
 		
 		currentYear.yearNum = Integer.parseInt(dateComponents[0]);
 		
-		currentMo = Integer.parseInt(dateComponents[1]);
 		//new Month(dateComponents[1]);
 		//new Day(dateComponents[2]);
 		
@@ -110,8 +105,6 @@ public class Calendar extends JFrame {
 		
 		final JPanel components = new JPanel();
 		components.setLayout(experiment);
-		JPanel title = new JPanel();
-		title.setLayout(new GridLayout(0,1));
 		JPanel headings = new JPanel();
 		headings.setLayout(new GridLayout(0,9));
 		JPanel leftNavigation = new JPanel();
@@ -120,17 +113,15 @@ public class Calendar extends JFrame {
 		rightNavigation.setLayout(new GridLayout(0,1));
 		//p.setVisible(true);
 		
-		//Set number of days to display based on currentMo 
-		days = currentYear.getDate(currentMo-1);
+		//Set currentMo 
 		
-		//Days of the month
+		
 		for (int count = 0; count < days; count++)
 		{
-			components.add(new JButton(Integer.toString(count+1)));
+			components.add(new JButton("Button1"));
 		
 		}
 		
-		//Day of the Week labels
 		headings.add(new Label(""));
 		headings.add(new Label("Sunday"));
 		headings.add(new Label("Monday"));
@@ -141,19 +132,13 @@ public class Calendar extends JFrame {
 		headings.add(new Label("Saturday"));
 		headings.add(new Label(""));
 		
-		//Navigation buttons
 		leftNavigation.add(new JButton("Previous"));
 		rightNavigation.add(new JButton("Next"));
 		
-		title.add(new Label("Month: " + Integer.toString(currentMo)));
-		
-		//Set gaps and size
 		experiment.setHgap(0);
 		experiment.setVgap(0);
 		experiment.layoutContainer(components);
 		
-		//Add components to panel
-		p.add(title, BorderLayout.NORTH);
 		p.add(headings, BorderLayout.NORTH);
 		p.add(components, BorderLayout.CENTER);
 		p.add(leftNavigation, BorderLayout.WEST);
